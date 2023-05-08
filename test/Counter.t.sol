@@ -2,23 +2,19 @@
 pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
-import "../src/Counter.sol";
+import "../src/TFMContract.sol";
 
-contract CounterTest is Test {
-    Counter public counter;
+contract TFMContractTest is Test {
+    TFMContract public tfmContract;
 
     function setUp() public {
-        counter = new Counter();
-        counter.setNumber(0);
+        tfmContract = new TFMContract();
     }
 
-    function testIncrement() public {
-        counter.increment();
-        assertEq(counter.number(), 1);
-    }
-
-    function testSetNumber(uint256 x) public {
-        counter.setNumber(x);
-        assertEq(counter.number(), x);
+    function testSum() public {
+        uint256 a = 1;
+        uint256 b = 2;
+        uint256 c = tfmContract.sum(a, b);
+        assertTrue(c == 3, "sum is not 3");
     }
 }
