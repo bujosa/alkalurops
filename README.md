@@ -1,2 +1,3 @@
 # alkalurops
-This is a simple smart contract in solidity, is just for university tesis US
+
+This is a simple smart contract in solidity, is just for university tesis US (Universidad de Sevilla).
